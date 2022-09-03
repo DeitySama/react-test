@@ -83,7 +83,7 @@ function App() {
   return (
     <div className={"App relative  dark:bg-zinc-900 " +((preview && Object.keys(preview).length>=1)?'h-screen overflow-hidden':'')}>
       <div><Navbar/></div>
-      <div className='md:px-10 mt-10 px-5 flex  md:justify-end'>
+      <div className='md:px-10 mt-10 px-5 flex  md:justify-end overflow-x-hidden'>
         {(pages && pages.length>1)?pages.map((page_item,index)=><button onClick={(e)=>gotoPage(page_item)} key={index} className={'border py-2 px-2.5 text-xs rounded mr-2  '+((page_item===currPage)?'dark:text-white dark:slate-100 dark:border-white text-black border-black':'dark:text-slate-400 dark:border-zinc-800 text-slate-400')}>{page_item}</button>):''}
       </div>
           {
@@ -97,7 +97,7 @@ function App() {
                   :<div className='text-slate-400'><p>No Movies Here</p></div>
               }
           </div>
-      <div className='md:px-10 mt-10 pb-10 px-5 flex  md:justify-end'>
+      <div className='md:px-10 mt-10 pb-10 px-5 flex  md:justify-end overflow-x-hidden'>
         {(pages && pages.length>1)?pages.map((page_item,index)=><button onClick={(e)=>gotoPage(page_item)} key={index} className={'border py-2 px-2.5 text-xs rounded mr-2  '+((page_item===currPage)?'dark:text-white dark:slate-100 dark:border-white text-black border-black':'dark:text-slate-400 dark:border-zinc-800 text-slate-400')}>{page_item}</button>):''}
       </div>
     </div>
