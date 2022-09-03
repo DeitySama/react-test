@@ -12,7 +12,7 @@ const PreviewMovie = (props)=>{
                 </div>
                 
                 <div className="flex p-5 -mt-20 md:w-2/3 md:h-2/3  mx-auto md:rounded-xl backdrop-blur-md md:border border-slate-200 dark:border-zinc-800">
-                     <iframe id="player" type="text/html" className="rounded-xl mx-auto h-full" width="100%" title="Main Trailer"  src={`http://www.youtube.com/embed/${(preview.trailers.length>=1 && preview.trailers[0].key)?preview.trailers[0].key:''}`}></iframe>
+                     <iframe id="player" type="text/html" className="rounded-xl mx-auto h-full" width="100%" title="Main Trailer"  src={`https://www.youtube.com/embed/${(preview.trailers.length>=1 && preview.trailers[0].key)?preview.trailers[0].key:''}`}></iframe>
                 </div>
                 <div className="w-full p-5 md:px-0 md:pt-0 md:w-2/3 mx-auto md:mt-10 pb-20">
                     <div className="flex flex-col mt- md:flex-row justify-between">
@@ -42,7 +42,7 @@ const PreviewMovie = (props)=>{
                         <p className="mb-5 text-slate-500 font-medium">Other Trailers</p>
                         <div className="grid gap-10 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 md:gap-10">
                             {(preview.trailers && preview.trailers.length>=1)?preview.trailers.map((trailer,index)=> <div className="border dark:border-zinc-800 rounded-xl">                 
-                            <iframe id="player" type="text/html" title={trailer.key} className="rounded-xl mx-auto" width="100%" key={index} height="250" src={`http://www.youtube.com/embed/${trailer.key}`}
+                            <iframe id="player" type="text/html" title={trailer.key} className="rounded-xl mx-auto" width="100%" key={index} height="250" src={`https://www.youtube.com/embed/${trailer.key}`}
                                loading="lazy" ></iframe>
                                 </div>):<div className="dark:text-white"><p>No Trailers Available</p></div>}
                         </div>
